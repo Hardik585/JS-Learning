@@ -1,0 +1,23 @@
+{
+  "name": "js-project",
+  "version": "1.0.0",
+  "description": "I am Learning Js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Project"
+  ],
+  "author": "Hardik",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
+    "jquery": "^3.7.1"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script tyep="text/javaScript" src="../scripts/day6.js"></script>
+  </head>
+  <body onload="bodyOnload()">
+    <!-- By windows.document.[][] -->
+    <img width="100" height="100" border="1" />
+    <form>
+      <h2>Your Email :</h2>
+      <input type="text" /> <input type="button" />
+    </form>
+    <form>
+      <h2>Your Password :</h2>
+      <input type="text" /> <input type="button" />
+    </form>
+
+    <!-- By name -->
+    <img name="pic" width="100" height="100" border="1" />
+    <img name="pic2" width="100" height="100" border="1" />   <!-- if name are same then it will get confuse on do nothing  -->
+    <form name="formReg">
+      <h2>Your Email :</h2>
+      <input  type="text" /> <input name="btnReg" type="button" />
+    </form>
+    <form name="formLog">
+      <h2>Your Password :</h2>
+      <input type="text" /> <input name="btnLogin" type="button" />
+    </form>
+
+    <!-- By document by Id Selector  -->
+    <form >
+        <h2>Your Email :</h2>
+        <input  type="text" /> <input id="btnReg" type="button" />
+      </form>
+
+      <!-- By QuerySelector -->
+      <form >
+        <h2>Your Email :</h2>
+        <input  type="text" /> <input class="btn Reg" type="button" />
+      </form>
+  </body>
+</html>

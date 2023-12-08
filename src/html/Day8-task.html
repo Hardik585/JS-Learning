@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javaScript" src="../scripts/day8-task.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="container-fluid">
+    <div class="mt-3" >
+      <button
+        class="btn btn-info"
+        data-bs-toggle="modal"
+        data-bs-target="#TicketBooking"
+        id="Book-Btn"
+      >
+        Book Ticket
+      </button>
+    </div>
+    <div class="modal fade" id="TicketBooking">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Booked Ticket Form Here</h3>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-around">
+              <div>
+                <select class="form-select" id="movieName">
+                  <option>Pathan</option>
+                  <option>Tiger3</option>
+                  <option>Animal</option>
+                </select>
+              </div>
+              <div>
+                <select class="form-select" id="cinemaName">
+                  <option>INOX</option>
+                  <option>JOI CIMENA</option>
+                  <option>HOODA PARK</option>
+                </select>
+              </div>
+              <div>
+                <select class="form-select" id="day">
+                  <option>Today</option>
+                  <option>Tomorrow</option>
+                  <option>Yesterday</option>
+                </select>
+              </div>
+              <div>
+                <select class="form-select" id="timing">
+                  <option>10 AM</option>
+                  <option>3 PM</option>
+                  <option>8 PM</option>
+                </select>
+              </div>
+
+              <button
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                onclick="bookedTicket()"
+              >
+                Book Ticket
+              </button>
+              <button class="btn btn-danger" data-bs-dismiss="modal">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3" style="display:none;" id="ShowDetails">
+      <div calss="row">
+        <dl>
+            <img height="180px" width="180px" id="imgTag"/>
+          <dt class="col-4">Film Name :</dt>
+          <dd class="col-8" id="Movie-Name"></dd>
+          <dt class="col-4">Cinema Name:</dt>
+          <dd class="col-8" id="Movie-Hall"></dd>
+          <dt class="col-4">Day</dt>
+          <dd class="col-8" id="Movie-Day"></dd>
+          <dt class="col-4">Timing</dt>
+          <dd class="col-8" id="Movie-Timing"></dd>
+        </dl>
+      </div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
