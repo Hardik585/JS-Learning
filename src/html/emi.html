@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <script type="text/javaScript" src="../scripts/emi.js"></script>
+  </head>
+  <body>
+    <div
+      class="container-fluid rshadow-lg p-3 mb-5 bg-body-tertiary rounded opacity-100 border border-secondary mx-auto p-2 mt-3"
+      style="width: 90%"
+    >
+      <h3 class="mt-2" style="text-align: center">
+        Personal Loan EMI Calculater
+      </h3>
+      <div class="row mt-3">
+        <div class="col-4">
+          <h5 style="display: inline">
+            Amount You Required <span>&#8377;</span>
+          </h5>
+          <input type="text" size="10" id="text-Amount"  onchange="textAmountChange()"/>
+        </div>
+        <div class="col-4">
+          <h5 style="display: inline">Years</h5>
+          <input type="text" size="5" id="text-Years" onchange="textYearChange()"/>
+        </div>
+        <div class="col-4">
+          <h5 style="display: inline">Intrest Rate</h5>
+          <input type="text" size="5" id="text-IntrestRate" onchange="textRateChange()"/>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <div class="d-flex">
+            <span>&#8377; 50,000 </span>
+            <input
+              type="range"
+              value="50000"
+              min="50000"
+              max="1000000"
+              id="range-Amount"
+              onchange="amountChange()"
+            />
+            <span>&#8377; 10,00,000 </span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex">
+            <span>1</span>
+            <input
+              type="range"
+              value="1"
+              min="1"
+              max="10"
+              id="range-Years"
+              onchange="yearsChange()"
+            />
+            <span>10</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex">
+            <span>7.5%</span>
+            <input
+              type="range"
+              value="7.50"
+              min="7.50"
+              max="20"
+              step="0.01"
+              id="range-IntrestRate"
+              onchange="intrestRateChange()"
+            />
+            <span>20%</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mt-3" style="text-align: center">
+          <button class="btn btn-primary" onclick="calculateEmi()">
+            Calculate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+        <p style="font-size:30px"  class="mt-3 text-center" id="showResult"></p>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
