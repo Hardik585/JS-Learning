@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script type="text/javascript" src="../scripts/day17.js"></script>
+  </head>
+  <body class="container-fluid">
+    <form class="form-control">
+      <dl class="w-90">
+        <dt>Your Country</dt>
+        <dd class="input-group" >
+          <select id="country-Name" onchange="setPic()">
+            <option>Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>London</option>
+          </select>
+          <img  width="70" height="40" class="input-group-text" id="country-Pic"/>
+        </dd>
+        <dt>Your Mobile No:</dt>
+        <dd><input type="text" id="text-Mobile"> </dd>
+        <dd><p class="text-danger" id="errorMsg"></p></dd>
+        </dl>
+   </form>
+   <button onclick="RegClick()">Register</button>  
+  </body>
+</html>
