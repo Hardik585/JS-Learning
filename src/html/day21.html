@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+
+    <script>
+      var cities = ["Delhi", "Jhajjar", "Noida"];
+      function bodyLoad() {
+        document.getElementById("selectTab").innerHTML = "";
+        var selectTag = document.getElementById("selectTab");
+        for (var city of cities) {
+          var option = document.createElement("option");
+          option.text = city;
+          option.valuecity;
+          selectTag.appendChild(option);
+        }
+        document.getElementById(
+          "countCity"
+        ).innerHTML = `Total City are : ${cities.length}`;
+      }
+
+      function addNewCity() {
+        var newCity = document.getElementById("newCity").value;
+        var flag = cities.indexOf(newCity);
+        if (flag == -1) {
+          cities.push(newCity);
+          document.getElementById("newCity").value = "";
+          bodyLoad();
+        } else {
+          alert("city is already Present ");
+        }
+      }
+
+      function removeCity() {
+        var removeCity = document.getElementById("selectTab").value;
+        var removeCityIndex = cities.indexOf(removeCity);
+        if (removeCityIndex != -1) {
+          var flag = confirm("Are you sure ");
+          if (flag == true) {
+            cities.splice(removeCityIndex, 1);
+            bodyLoad();
+          }
+        } else {
+          alert("plz select Atleast One City ");
+        }
+      }
+
+      function removeAll() {
+        cities.length = 0;
+        bodyLoad();
+      }
+
+      function sortAsc() {
+        cities.sort();
+        bodyLoad();
+      }
+      function sortDes() {
+        cities.sort().reverse();
+        bodyLoad();
+      }
+    </script>
+  </head>
+  <body onload="bodyLoad()">
+    <h2>Arrays Manupulation Dynamically</h2>
+
+    <div>
+      <h5>Add New City</h5>
+      <input type="text" id="newCity" />
+      <button onclick="addNewCity()">Add</button>
+    </div>
+    <div>
+      <select id="selectTab" class="form-select mt-3" size="3"></select>
+    </div>
+
+    <div>
+      <p id="countCity"></p>
+    </div>
+
+    <div>
+      <button onclick="removeCity()">Remove City</button>
+      <button onclick="removeAll()">Remove ALL</button>
+      <button onclick="sortAsc()">Sort Asec</button>
+      <button onclick="sortDes()">Sort Dec</button>
+    </div>
+  </body>
+</html>
