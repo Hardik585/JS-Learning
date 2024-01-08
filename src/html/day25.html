@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<style>
+    main{
+        /* display: grid;
+        grid-template-columns: 6fr 6fr; */
+    }
+</style>
+
+
+  <script>
+    var data = [
+      {
+        topic: "JAvaScript",
+        description: "JavaScript is a intrepreter Langauage",
+      },
+      { topic: "html", description: "Html is a Markup Langauage" },
+    ];
+    function bodyLoad() {
+      var dl = document.createElement("dl");
+      for (var datas of data) {
+        var dt = document.createElement("dt");
+        dt.innerHTML=datas.topic;
+        var dd = document.createElement("dd");
+        dd.innerHTML=datas.description;
+        dl.appendChild(dt);
+        dl.appendChild(dd);
+      }
+      console.log(dl);
+      document.querySelector("main").appendChild(dl);
+    }
+  </script>
+  <body onload="bodyLoad()">
+    <main>
+
+    </main>
+</body>
+</html>

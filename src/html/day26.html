@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol{
+            list-style: none;
+        }
+    </style>
+<script>
+function getTime(){
+    var now1 = new Date();
+    document.querySelector("h1").innerHTML= now1.toLocaleTimeString();
+}
+
+        function bodyLoad(){
+            var now = new Date();
+           var li = document.createElement("li");
+           console.log(now.toLocaleTimeString());
+           li.innerHTML=now.toLocaleString();
+           setInterval(getTime,1000);
+           console.log(li);
+           document.querySelector("ol").appendChild(li);
+           
+           
+        }
+
+        function mapDataLoad(){
+            var data = new Map();
+            data.set(1 , "Hardik");
+            document.write(data.get(1));
+        }
+</script>
+
+</head>
+<body onload="bodyLoad()">
+ <header>
+    <nav>
+       <ol>
+       </ol> 
+    </nav>
+ </header>
+ <button onclick="mapDataLoad()">See Map Demo</button>
+    <h2>Here Map and Date Non Premative Data Type Demo Learn </h2>
+    <h1></h1>
+</body>
+</html>

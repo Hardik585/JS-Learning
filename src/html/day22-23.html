@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- <link href="../../DataStore/fakeStore.json" -->
+  <script>
+    function bodyLoad(){
+           
+         fetch("../../DataStore/fakeStore.json")
+           .then(function(response){
+            return response.json();
+           })
+            .then(function(data){
+              console.log(data.Name);
+               document.getElementById("para").innerHTML =`${data.id} <br> ${data.Name}` ;
+            })
+         
+        }
+  </script>
+
+  <style>
+    table, th, td {
+  border:1px solid black;
+}
+  </style>
+</head>
+<body onload="bodyLoad()">
+    <div class="container-fluid">
+    <h2>Here Object learn and Called remote API </h2>
+       <table id="table" style="width: 100%;">
+       <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Image</th>
+       </tr>
+       </table>
+
+       <p id="para"></p>
+    </div>
+</body>
+</html>
